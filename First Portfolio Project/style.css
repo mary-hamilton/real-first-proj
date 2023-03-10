@@ -3,16 +3,8 @@ html {
     font-family: sans-serif;
 }
 
-/*Attempting to make a nice clean scroll between sections*/
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-.wrapper {
-    min-height: 100%;
+* {
+    border: 1px solid black;
 }
 
 header {
@@ -29,26 +21,31 @@ nav a {
     width: 33%;
 }
 
- /* * {
-    border: 1px solid black;
-} */
+/*Attempting to make a nice clean scroll between sections*/
 
- .boxholder {
+html, body, .boxholder {
+    height: 100%;
+    margin: 0;
+}
+
+
+.wrapper {
+    min-height: 100%;
+}
+
+
+.boxholder {
      display: flex;
      flex-direction: column;
  }
 
-
 .textbox {
     display: flex;
     flex-direction: column;
-
 }
 
 .textbox h3 {
-
     font-size: 40px;
-    margin-bottom: 0px;
 }
 
 .textbox p {
