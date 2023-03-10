@@ -1,7 +1,7 @@
 
 .container {
     border: 5px solid green;
-    /* background-color: red; */
+    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,23 +10,40 @@
     height: auto;
 
  }
-.skinny-container {
-    
+
+/*.skinny-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
 }
-/*     &:hover > .button:not(:hover) {
-     background: green; */
+
+.skinny-container:hover > .box:not(:hover) {
+    background: green;
+}
+*/
+
+ /*.container:hover {
+    align-items: flex-start; */
+
+
+.container:hover > .box:not(:hover) {
+    align-self: flex-start;
+}
+
+.box:hover {
+    align-self: flex-end;
+}
+
 
 .box {
-    /*background-color: yellow ;*/
+    background-color: yellow ;
     height: 400px;
     width: 400px;
     border: 5px solid black;
 }
 
 
-.box:hover {
-  align-self: flex-end;
-}
+
 
 /*
 .container:hover {
