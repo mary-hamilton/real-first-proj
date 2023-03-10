@@ -1,17 +1,23 @@
 
 .container {
     border: 5px solid green;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: auto;
     height: auto;
+
+ }
+.skinny-container {
+    
 }
+/*     &:hover > .button:not(:hover) {
+     background: green; */
 
 .box {
-    background-color: yellow ;
+    /*background-color: yellow ;*/
     height: 400px;
     width: 400px;
     border: 5px solid black;
