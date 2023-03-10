@@ -5,7 +5,8 @@ html {
 
 /*Attempting to make a nice clean scroll between sections*/
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -14,9 +15,28 @@ html, body {
     min-height: 100%;
 }
 
- * {
-    border: 1px solid black;
+header {
+    font-size: 50px;
 }
+
+nav {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+nav a {
+    width: 33%;
+}
+
+ /* * {
+    border: 1px solid black;
+} */
+
+ .boxholder {
+     display: flex;
+     flex-direction: column;
+ }
 
 
 .textbox {
@@ -35,9 +55,21 @@ html, body {
     font-size: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     .textbox p {
         color: blue;
+    }
+
+    .boxholder {
+        flex-direction: row;
+    }
+
+    .textbox {
+        width: 33%;
+    }
+
+    nav {
+        display: none;
     }
 }
 
