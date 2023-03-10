@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+/*Attempting to make a nice clean scroll between sections*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+ * {
+    border: 1px solid black;
+}
+
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.textbox h3 {
+
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.textbox p {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .textbox p {
+        color: blue;
+    }
+}
+
+
