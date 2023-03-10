@@ -1,0 +1,42 @@
+
+* {
+    border: 1px solid black;
+}
+
+
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+.box p {
+    background-color: red;
+    text-align: center;
+}
+
+/*.box:hover {
+    animation-name: fadeout;
+    animation-duration: 2s;
+} */
+
+.box:hover > p {
+    background-color: yellow;
+    animation-name: up-fadeout;
+    animation-duration: 2s;
+
+}
+
+@keyframes up-fadeout {
+    0% {opacity: 1}
+    50% {opacity:0; translate: 50px 0px}}
+}
+
+/* @keyframes up {
+    50% {translate: 50px 0px}
+}
+*/
