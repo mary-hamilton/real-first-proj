@@ -25,14 +25,21 @@
  /*.container:hover {
     align-items: flex-start; */
 
-
+/*
 .container:hover > .box:not(:hover) {
     translate: -20% 0 0;
 }
 
-.container:hover > .box:hover {
+.container:hover >
+*/
+.box:hover {
     translate: 20% 0 0;
 }
+
+.box:hover ~ .box:not(:hover) {
+    translate: -20% 0 0;
+}
+
 
 
 .box {
