@@ -27,11 +27,11 @@
 
 
 .container:hover > .box:not(:hover) {
-    align-self: flex-start;
+    translate: -20% 0 0;
 }
 
-.box:hover {
-    align-self: flex-end;
+.container:hover > .box:hover {
+    translate: 20% 0 0;
 }
 
 
