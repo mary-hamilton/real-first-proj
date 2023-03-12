@@ -1,3 +1,4 @@
+/* Rules for Index Page */
 
 .container {
     border: 5px solid green;
@@ -28,14 +29,77 @@
     align-self: flex-start;
 }
 
+/* Rules for Intro Page */
 
-
-
-
-
-
-/*
-.container:hover {
-    align-items: flex-start;
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
 }
-*/
+
+* {
+    border: 1px solid black;
+}
+
+header {
+    font-size: 50px;
+}
+
+nav {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+nav a {
+    width: 33%;
+}
+
+/*Attempting to make a nice clean scroll between sections*/
+
+html, body, .boxholder {
+    height: 100%;
+    margin: 0;
+}
+
+
+.wrapper {
+    min-height: 100%;
+}
+
+
+.boxholder {
+     display: flex;
+     flex-direction: column;
+ }
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox h3 {
+    font-size: 40px;
+}
+
+.textbox p {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .textbox p {
+        color: blue;
+    }
+
+    .boxholder {
+        flex-direction: row;
+    }
+
+    .textbox {
+        width: 33%;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
