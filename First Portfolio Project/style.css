@@ -44,3 +44,32 @@ you can't see what you're clicking on
     100% {opacity:1; translate: 0 0}
 }
 
+/* A functional but not very jazzy mobile bounce - this will not work
+anyway because no-one will see it!*/
+
+@media only screen and (max-width: 600px) {
+
+    .box p {
+        translate: 0 0;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .box:hover > p {
+
+        animation-name: fadedown-bounce;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+
+    }
+
+    @keyframes fadedown-bounce {
+        0% {opacity: 0}
+        40% {translate: 0 -100%}
+        50% {translate: 0 10%}
+        70% {translate: 0 -50%}
+        100% {opacity:1; translate: 0 0}
+    }
+
+    
+}
