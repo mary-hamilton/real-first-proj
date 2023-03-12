@@ -9,31 +9,7 @@
     width: auto;
     height: auto;
     pointer-events: none;
-
- }
-
-/*.skinny-container {
-    display: flex;
-    flex-direction: column;
-    flex-basis: auto;
 }
-
-.skinny-container:hover > .box:not(:hover) {
-    background: green;
-}
-*/
-
- /*.container:hover {
-    align-items: flex-start; */
-
-/*
-.container:hover > .box:not(:hover) {
-    translate: -20% 0 0;
-}
-
-.container:hover >
-*/
-
 
 .box {
     background-color: yellow ;
