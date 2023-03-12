@@ -1,7 +1,7 @@
 
-* {
+/* * {
     border: 1px solid black;
-}
+} */
 
 
 .box {
@@ -12,31 +12,35 @@
     width: 200px;
     height: 200px;
     background-color: green;
+    overflow: hidden;
 }
 
 .box p {
-    background-color: red;
+
+    translate: 0 300%;
     text-align: center;
+    font-size: 40px;
 }
 
-/*.box:hover {
-    animation-name: fadeout;
-    animation-duration: 2s;
-} */
+/* Makes text bounce up and into view */
+
+/* This looks cool but it wouldn't work on mobile;
+you can't see what you're clicking on
+ */
 
 .box:hover > p {
-    background-color: yellow;
-    animation-name: up-fadeout;
-    animation-duration: 2s;
+    
+    animation-name: fadeup-bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease;
 
 }
 
-@keyframes up-fadeout {
-    0% {opacity: 1}
-    50% {opacity:0; translate: 50px 0px}}
+@keyframes fadeup-bounce {
+    0% {opacity: 0}
+    50% {translate: 0 -50%}
+    57% {translate: 0 0%}
+    80% {translate: 0 -10%}
+    100% {opacity:1; translate: 0 0}
 }
 
-/* @keyframes up {
-    50% {translate: 50px 0px}
-}
-*/
