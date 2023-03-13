@@ -1,3 +1,14 @@
+/* General Stuff */
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Courier New", sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
 /* Rules for Index Page */
 
 .container {
@@ -13,13 +24,16 @@
 }
 
 .box {
-    background-color: yellow ;
+    background-color: yellow;
     height: 400px;
     width: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    overflow: hidden;
     border: 5px solid black;
     pointer-events: auto;
 }
-
 
 .box:hover {
     align-self: flex-end;
@@ -29,16 +43,73 @@
     align-self: flex-start;
 }
 
+.box p {
+
+    translate: 0 500%;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Makes text bounce up and into view */
+
+/* This looks cool but it wouldn't work on mobile;
+you can't see what you're clicking on */
+
+ /* .box:hover  p {
+    
+    animation-name: fadeup-bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+}
+
+ @keyframes fadeup-bounce {
+    0% {opacity: 0}
+    50% {translate: 0 -60%}
+    55% {translate: 0 0}
+    80% {translate: 0 -10%}
+    100% {opacity:1; translate: 0 0}
+}
+*/
+
+
+/* Bounces on screen load on mobile */
+
+@media only screen and (max-width: 600px) {
+
+    .box p {
+        translate: 0 0;
+        text-align: center;
+        font-size: 40px;
+        animation-name: fadeup-bounce;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: backwards;
+    }
+
+    /* staggering the bounces */
+
+    .box-1 p {
+        animation-delay: 0s;
+    }
+
+    .box-2 p {
+        animation-delay: 0.33s;
+    }
+
+    .box-3 p {
+        animation-delay: 0.66s;
+    }
+
+    .box-4 p {
+        animation-delay: 1s;
+    }
+}
+
+
 /* Rules for Intro Page */
 
-html {
-    scroll-behavior: smooth;
-    font-family: sans-serif;
-}
-
-* {
-    border: 1px solid black;
-}
 
 header {
     font-size: 50px;
@@ -56,7 +127,7 @@ nav a {
 
 /*Attempting to make a nice clean scroll between sections*/
 
-html, body, .boxholder {
+ html, body, .boxholder {
     height: 100%;
     margin: 0;
 }
@@ -68,9 +139,9 @@ html, body, .boxholder {
 
 
 .boxholder {
-     display: flex;
-     flex-direction: column;
- }
+    display: flex;
+    flex-direction: column;
+}
 
 .textbox {
     display: flex;
@@ -102,4 +173,3 @@ html, body, .boxholder {
         display: none;
     }
 }
-
