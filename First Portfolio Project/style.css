@@ -27,8 +27,10 @@ a:visited {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     pointer-events: none;
+    transition: 1s ease-in-out;
+    overflow: hidden;
 }
 
 .fatbox {
@@ -40,6 +42,7 @@ a:visited {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease-in-out;
 }
 
 /* * {
@@ -61,7 +64,6 @@ a:visited {
 
 .fatbox:hover {
     transform: translateX(15%) rotate(20deg);
-    width: 100%;
 
 }
 
@@ -74,6 +76,7 @@ a:visited {
     translate: 0 500%;
     text-align: center;
     font-size: 40px;
+    padding: 10px;
 }
 
 /* Makes text bounce up and into view */
@@ -221,7 +224,6 @@ article p::after {
 
 /*Attempting to make a nice clean scroll between sections*/
 
-
  .main-box {
 
      display: flex;
@@ -242,10 +244,13 @@ article p::after {
 .wrapper {
     position: relative;
     height: 100vh;
-
 }
 
+/* Colours */
 
+header {
+    background-color: red;
+}
 
 .about-me {
     background-color: red;
