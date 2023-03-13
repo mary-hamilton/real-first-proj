@@ -5,6 +5,11 @@ html {
     font-family: "Courier New", sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 a:link {
     text-decoration: none;
     color: inherit;
@@ -139,7 +144,6 @@ you can't see what you're clicking on */
 
 
 /* Rules for Intro Page */
-
 * {
     border: 1px solid black;
 }
@@ -147,7 +151,7 @@ you can't see what you're clicking on */
 
 header {
     font-size: 50px;
-    padding: 10px 0px 30px 15px;
+    padding: 10px 10px 30px 15px;
 }
 
 nav {
@@ -158,16 +162,52 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1;
+
 }
 
 nav a {
-    width: 33%;
+    width: 34%;
+    padding: 10px;
+}
+
+nav p {
+    padding: 10px;
+}
+
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox h3 {
+    font-size: 40px;
+    padding: 20px;
+    margin: 50px 0 0 0 ;
+}
+
+.textbox p {
+    font-size: 20px;
+}
+
+.scroll-holder {
+    display: flex;
+    width: auto;
+    overflow: hidden;
+}
+
+.scrolling-link {
+    animation: textscroll 3s linear infinite;
+}
+
+@keyframes textscroll {
+
+    from {transform: translateX(100%)}
+    to {transform: translateX(-100%)}
 }
 
 /*Attempting to make a nice clean scroll between sections*/
-body {
-    margin: 0;
-}
+
 
  .main-box {
 
@@ -192,18 +232,6 @@ body {
 
 }
 
-.textbox {
-    display: flex;
-    flex-direction: column;
-}
-
-.textbox h3 {
-    font-size: 40px;
-}
-
-.textbox p {
-    font-size: 20px;
-}
 
 .about-me {
     background-color: red;
@@ -233,3 +261,4 @@ body {
     nav {
         display: none;
     }
+}
