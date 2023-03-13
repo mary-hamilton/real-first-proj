@@ -157,6 +157,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav a {
@@ -164,19 +165,20 @@ nav a {
 }
 
 /*Attempting to make a nice clean scroll between sections*/
-
- html, body {
-    height: 100%;
+body {
     margin: 0;
 }
 
  .main-box {
+
+     display: flex;
+     flex-direction: column;
      position: relative;
-     height: 100%;
      margin: 0;
  }
 
  .smaller-box {
+
      display: flex;
      flex-direction: column;
      position: relative;
@@ -185,7 +187,9 @@ nav a {
  }
 
 .wrapper {
-    min-height: 100%;
+    position: relative;
+    height: 100vh;
+
 }
 
 .textbox {
