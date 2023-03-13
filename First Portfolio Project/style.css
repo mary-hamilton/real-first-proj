@@ -39,11 +39,12 @@ a:visited {
 }
 
 .box:hover {
-    transform: translateX(15%);
+    transform: translateX(15%) rotate(20deg);
+
 }
 
 .container:hover > .box:not(:hover) {
-    transform: translateX(-15%);
+    transform: translateX(-15%) rotate(0);
 }
 
 .box p {
@@ -81,6 +82,7 @@ you can't see what you're clicking on */
 /* Bounces on screen load on mobile */
 
 @media only screen and (max-width: 600px) {
+   
 
     .box {
         height: 25%;
@@ -168,4 +170,18 @@ nav a {
 }
 
 @media only screen and (min-width: 768px) {
+    .textbox p {
+        color: blue;
+    }
 
+    .boxholder {
+        flex-direction: row;
+    }
+
+    .textbox {
+        width: 33%;
+    }
+
+    nav {
+        display: none;
+    }
