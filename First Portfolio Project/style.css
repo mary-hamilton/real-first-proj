@@ -9,6 +9,10 @@ a:link {
     text-decoration: none;
     color: inherit;
 }
+
+a:visited {
+    color: inherit;
+}
 /* Rules for Index Page */
 
 .container {
@@ -110,12 +114,18 @@ you can't see what you're clicking on */
 
 /* Rules for Intro Page */
 
+* {
+    border: 1px solid black;
+}
+
 
 header {
     font-size: 50px;
+    padding: 10px 0px 30px 15px;
 }
 
 nav {
+    position: sticky;
     display: flex;
     font-size: 20px;
     justify-content: space-between;
@@ -154,6 +164,18 @@ nav a {
 
 .textbox p {
     font-size: 20px;
+}
+
+.about-me {
+    background-color: red;
+}
+
+.stuff-1 {
+    background-color: yellow;
+}
+
+.stuff-2 {
+    background-color: green;
 }
 
 @media only screen and (min-width: 768px) {
