@@ -38,8 +38,8 @@ you can't see what you're clicking on
 
 @keyframes fadeup-bounce {
     0% {opacity: 0}
-    50% {translate: 0 -50%}
-    57% {translate: 0 0%}
+    50% {translate: 0 -60%}
+    55% {translate: 0 0}
     80% {translate: 0 -10%}
     100% {opacity:1; translate: 0 0}
 }
@@ -55,8 +55,25 @@ you can't see what you're clicking on
         animation-name: fadeup-bounce;
         animation-duration: 1s;
         animation-timing-function: ease;
-
+        animation-fill-mode: backwards;
     }
+
+    .box-1 p {
+        animation-delay: 0s;
+    }
+
+    .box-2 p {
+        animation-delay: 0.33s;
+    }
+
+    .box-3 p {
+        animation-delay: 0.66s;
+    }
+
+    .box-4 p {
+        animation-delay: 1s;
+    }
+}
 
     /* @keyframes fadedown-bounce {
         0% {opacity: 0}
