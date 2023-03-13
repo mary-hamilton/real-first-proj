@@ -102,7 +102,7 @@ you can't see what you're clicking on */
    
 
     .box {
-        height: 25%;
+        height: 100%;
         aspect-ratio: 1 / 1;
     }
 
@@ -151,10 +151,12 @@ header {
 }
 
 nav {
-    position: sticky;
+
     display: flex;
     font-size: 20px;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
@@ -163,20 +165,27 @@ nav a {
 
 /*Attempting to make a nice clean scroll between sections*/
 
- html, body, .boxholder {
+ html, body {
     height: 100%;
     margin: 0;
 }
 
+ .main-box {
+     position: relative;
+     height: 100%;
+     margin: 0;
+ }
+
+ .smaller-box {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     height: 100%;
+     margin: 0;
+ }
 
 .wrapper {
     min-height: 100%;
-}
-
-
-.boxholder {
-    display: flex;
-    flex-direction: column;
 }
 
 .textbox {
@@ -209,7 +218,7 @@ nav a {
         color: blue;
     }
 
-    .boxholder {
+    .smaller-box {
         flex-direction: row;
     }
 
