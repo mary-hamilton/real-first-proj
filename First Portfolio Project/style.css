@@ -174,7 +174,6 @@ nav p {
     padding: 10px;
 }
 
-
 .textbox {
     display: flex;
     flex-direction: column;
@@ -190,6 +189,7 @@ nav p {
     font-size: 20px;
     margin-left: 20px
 }
+ /* Scrolling text */
 
 .scroll-holder {
     display: flex;
@@ -199,8 +199,6 @@ nav p {
 }
 
 .scrolling-link {
-
-
     animation: textscroll 3s linear infinite;
 }
 
@@ -208,6 +206,17 @@ nav p {
 
     from {transform: translateX(200%)}
     to {transform: translateX(-100%)}
+}
+
+/* Blinking text */
+
+@keyframes textblink {
+    to  {visibility: hidden; background-color: darkgray}
+}
+
+article p::after {
+    content:"_";
+    animation: textblink 1.5s steps(2, start) infinite;
 }
 
 /*Attempting to make a nice clean scroll between sections*/
@@ -235,6 +244,7 @@ nav p {
     height: 100vh;
 
 }
+
 
 
 .about-me {
