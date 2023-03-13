@@ -9,10 +9,13 @@ a:link {
     text-decoration: none;
     color: inherit;
 }
+
+a:visited {
+    color: inherit;
+}
 /* Rules for Index Page */
 
 .container {
-
     background-color: red;
     display: flex;
     flex-direction: column;
@@ -36,11 +39,11 @@ a:link {
 }
 
 .box:hover {
-    align-self: flex-end;
+    transform: translateX(15%);
 }
 
 .container:hover > .box:not(:hover) {
-    align-self: flex-start;
+    transform: translateX(-15%);
 }
 
 .box p {
