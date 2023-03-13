@@ -144,9 +144,9 @@ you can't see what you're clicking on */
 
 
 /* Rules for Intro Page */
-* {
+/* * {
     border: 1px solid black;
-}
+} */
 
 
 header {
@@ -188,21 +188,25 @@ nav p {
 
 .textbox p {
     font-size: 20px;
+    margin-left: 20px
 }
 
 .scroll-holder {
     display: flex;
-    width: auto;
+    width: 200px;
     overflow: hidden;
+    margin-left: 20px;
 }
 
 .scrolling-link {
+
+
     animation: textscroll 3s linear infinite;
 }
 
 @keyframes textscroll {
 
-    from {transform: translateX(100%)}
+    from {transform: translateX(200%)}
     to {transform: translateX(-100%)}
 }
 
